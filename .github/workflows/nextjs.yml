@@ -48,6 +48,8 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
+      - name: Print Package Manager
+        run: echo "Package Manager is ${{ steps.detect-package-manager.outputs.manager }}"
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
